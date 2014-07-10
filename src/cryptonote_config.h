@@ -19,27 +19,19 @@
 
 #define BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW               60
 
-//TODO Specify total number of available coins
-//TODO ((uint64_t)(-1)) equals to 18446744073709551616 coins
-//TODO or you can define number explicitly UINT64_C(858986905600000000)
-#define MONEY_SUPPLY                                   
-#define EMISSION_SPEED_FACTOR                           (18)
+#define MONEY_SUPPLY                                    ((uint64_t)(-1))                                  
+#define EMISSION_SPEED_FACTOR                           (22)
 
-//TODO Define number of blocks for block size median calculation
 #define CRYPTONOTE_REWARD_BLOCKS_WINDOW                 100
-#define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE       10000 //size of block (bytes) after which reward for block calculated using block size
+#define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE       8000 //size of block (bytes) after which reward for block calculated using block size
 #define CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE          600
-//TODO Define number of digits
-#define CRYPTONOTE_DISPLAY_DECIMAL_POINT                
-//TODO Define number of smallest units in one coin
-#define COIN                                            
-//TODO Define default fee for transactions
-#define DEFAULT_FEE                                     
+#define CRYPTONOTE_DISPLAY_DECIMAL_POINT                12
 
-//TODO Define preferred block's target time
-#define DIFFICULTY_TARGET                               120 // seconds
-//TODO There are options to tune CryptoNote's difficulty retargeting function. 
-//TODO We recommend not to change it.
+#define COIN                                            ((uint64_t)100000000) // pow(10, 8)
+#define DEFAULT_FEE                                     ((uint64_t)1000000) // pow(10, 6)
+
+
+#define DIFFICULTY_TARGET                               90 // seconds
 #define DIFFICULTY_WINDOW                               720 // blocks
 #define DIFFICULTY_LAG                                  15
 #define DIFFICULTY_CUT                                  60  // timestamps to cut after sorting
@@ -57,10 +49,8 @@
 #define BLOCKS_SYNCHRONIZING_DEFAULT_COUNT              200    //by default, blocks count in blocks downloading
 #define CRYPTONOTE_PROTOCOL_HOP_RELAX_COUNT             3      //value of hop, after which we use only announce of new block
 
-//TODO This port will be used by the daemon to establish connections with p2p network
-#define P2P_DEFAULT_PORT                                
-//TODO This port will be used by the daemon to interact with simlewallet
-#define RPC_DEFAULT_PORT                                
+#define P2P_DEFAULT_PORT                                7880
+#define RPC_DEFAULT_PORT                                7881
 #define COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT           1000
 
 #define P2P_LOCAL_WHITE_PEERLIST_LIMIT                  1000
@@ -79,8 +69,7 @@
 
 #define ALLOW_DEBUG_COMMANDS
 
-//TODO Put here the name of your currency
-#define CRYPTONOTE_NAME "unbounded"                        
+#define CRYPTONOTE_NAME                         "unbounded"                        
 #define CRYPTONOTE_BLOCKS_FILENAME              "blocks.dat"
 #define CRYPTONOTE_BLOCKINDEXES_FILENAME        "blockindexes.dat"
 #define CRYPTONOTE_BLOCKSCACHE_FILENAME         "blockscache.dat"
