@@ -27,7 +27,7 @@
 #define CRYPTONOTE_DISPLAY_DECIMAL_POINT                12
 
 #define COIN                                            ((uint64_t)100000000000) // pow(10, 11)
-#define DEFAULT_FEE                                     ((uint64_t)1000000000) // pow(10, 9)
+#define DEFAULT_FEE                                     ((uint64_t)10000000) // pow 5*(10, 7)
 
 
 #define DIFFICULTY_TARGET                               90 // seconds
