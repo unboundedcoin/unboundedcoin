@@ -18,16 +18,16 @@
 
 #define BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW               60
 
-#define MONEY_SUPPLY                                    UINT64_C(22600000000000000000)                                  
-#define EMISSION_SPEED_FACTOR                           (22)
+#define MONEY_SUPPLY                                    UINT64_C(2700000000000000000)                                  
+#define EMISSION_SPEED_FACTOR                           (20)
 
 #define CRYPTONOTE_REWARD_BLOCKS_WINDOW                 100
 #define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE       10000 //size of block (bytes) after which reward for block calculated using block size
 #define CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE          600
 #define CRYPTONOTE_DISPLAY_DECIMAL_POINT                12
 
-#define COIN                                            ((uint64_t)100000000) // pow(10, 8)
-#define DEFAULT_FEE                                     ((uint64_t)1000000) // pow(10, 6)
+#define COIN                                            ((uint64_t)100000000000) // pow(10, 11)
+#define DEFAULT_FEE                                     ((uint64_t)1000000000) // pow(10, 9)
 
 
 #define DIFFICULTY_TARGET                               90 // seconds
